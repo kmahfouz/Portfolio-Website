@@ -1,0 +1,42 @@
+
+.card-container:nth-of-type(even):not(.expanded-card){
+  flex-direction: row-reverse;
+}
+
+.card-container{
+  width: 99%;
+  height: 55vh;
+  box-sizing: border-box;
+  margin-top: 20px;
+  outline: rebeccapurple solid 1px;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  alignment: center;
+  align-items: center;
+
+
+  .card{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms ease;
+    background-color: darkgrey;
+
+    &:hover{
+      transform: scale(1.05);
+      transition: transform 500ms ease;
+    }
+  }
+
+  .description{
+    outline: blue solid 1px;
+    align-items: center;
+  }
+}
