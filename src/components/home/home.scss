@@ -1,0 +1,85 @@
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .home {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .name-box {
+      margin-left: 100px;
+      padding-bottom: 20vh;
+      font-size: 6rem;
+    }
+
+    .description-box {
+      margin-right: 100px;
+      padding-bottom: 20vh;
+    }
+  }
+
+  .button-box {
+    font-size: 1.5rem;
+    justify-content: space-evenly;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+
+    .work-link {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        transform: scaleX(0);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+    }
+    .work-link:hover {
+      color: darkgrey;
+      transition: color 200ms linear;
+      &:hover::before {
+        transform: scaleX(1);
+        background-color: darkgrey;
+      }
+    }
+
+    .contact-link {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        background-color: black;
+        transform: scaleX(0);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+    }
+      .contact-link:hover {
+        color: darkgrey;
+        transition: color 200ms linear;
+        &:hover::before {
+          transform: scaleX(1);
+          background-color: darkgrey;
+        }
+      }
+    }
+  }
