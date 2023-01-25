@@ -1,9 +1,19 @@
-.expanded-card{
+.expanded-card-container{
   position: fixed;
   top: 0;
   left: 0;
-  opacity: 0.1;
-  background-color: black;
+  opacity: 0.4;
+  background-color: gray;
   width: 100vw;
   height: 100vh;
+
+  .expanded-card{
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    width: 100vw;
+    height: 100vh;
+    background-color: black ;
+  }
 }

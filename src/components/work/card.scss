@@ -1,5 +1,5 @@
 
-.card-container:nth-of-type(even):not(.expanded-card){
+.card-container:nth-of-type(even){
   flex-direction: row-reverse;
 }
 

@@ -1,10 +1,29 @@
 import "./home.scss"
-import {useNavigate} from "react-router-dom";
+import {useEffect, useRef, useState} from "react";
+import Work from "../work/work.js";
+import Contact from "../contact/contact";
 
 const Home = () => {
-    const nav = useNavigate()
+
+    const workRef = useRef(null)
+    const contactRef = useRef(null)
+
+    const [isWork,setIsWork] = useState(false)
+    const [isContact,setIsContact] = useState(false)
+
+    useEffect(()=>{
+        if( isWork){
+            workRef.current.scrollIntoView({behavior: 'smooth'})
+            setIsWork(false)
+        }
+        if(isContact){
+            contactRef.current.scrollIntoView({behavior: 'smooth'})
+        setIsContact(false)
+        }
+},[isWork,isContact])
     return (
-        <div className={"home-wrapper"}>
+        <div className={'website-container'}>
+        <div className={"home-container"}>
             <div className={"home"}>
                 <div className={"name-box"}>
                     Karim Mahfouz
@@ -14,14 +33,15 @@ const Home = () => {
                 </div>
             </div>
             <div className={"button-box"}>
-                <div className={"work-link"} onClick={() => {
-                    nav("/work")
-                }}>Work
-                </div>
-                <div className={"contact-link"} onClick={() => {
-                    nav("/contact")
-                }}>Contact me
-                </div>
+                <div className={"work-link"} onClick={() => {setIsWork(true)}}>Work</div>
+                <div className={"contact-link"} onClick={() => {setIsContact(true)}}>Contact me</div>
+            </div>
+        </div>
+            <div className={"work-container"} ref={workRef}>
+                <Work/>
+            </div>
+            <div className={"contact-container"} ref={contactRef}>
+                <Contact/>
             </div>
         </div>
     )
