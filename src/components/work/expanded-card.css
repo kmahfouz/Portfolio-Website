@@ -1,0 +1,18 @@
+.expanded-card-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.expanded-card-container .expanded-card {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 40pt;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 1s ease-out;
+}
+
+/*# sourceMappingURL=expanded-card.css.map */

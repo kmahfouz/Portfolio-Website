@@ -1,4 +1,7 @@
 .website-container {
+  background-color: transparent;
+  color: white;
+  text-shadow: 1px 1px 10px white;
   .home-container {
     display: flex;
     flex-direction: column;
@@ -16,13 +19,14 @@
       .name-box {
         margin-left: 100px;
         padding-bottom: 20vh;
-        font-size: 9rem;
+        font-size: 6rem;
+
       }
 
       .description-box {
         margin-right: 100px;
         padding-bottom: 20vh;
-        font-size: 6rem;
+        font-size: 3rem;
       }
     }
 

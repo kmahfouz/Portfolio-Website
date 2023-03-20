@@ -22,11 +22,14 @@ const Home = () => {
         }
 },[isWork,isContact])
     return (
+
         <div className={'website-container'}>
         <div className={"home-container"}>
             <div className={"home"}>
                 <div className={"name-box"}>
                     Karim Mahfouz
+                    <br/>
+                    Software Developer
                 </div>
                 <div className={"description-box"}>
                     Hello there
