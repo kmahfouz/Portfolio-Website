@@ -1,3 +1,8 @@
+.website-container {
+  background-color: transparent;
+  color: white;
+  text-shadow: 1px 1px 10px white;
+}
 .website-container .home-container {
   display: flex;
   flex-direction: column;
@@ -15,12 +20,12 @@
 .website-container .home-container .home .name-box {
   margin-left: 100px;
   padding-bottom: 20vh;
-  font-size: 9rem;
+  font-size: 6rem;
 }
 .website-container .home-container .home .description-box {
   margin-right: 100px;
   padding-bottom: 20vh;
-  font-size: 6rem;
+  font-size: 3rem;
 }
 .website-container .home-container .button-box {
   font-size: 2.5rem;
