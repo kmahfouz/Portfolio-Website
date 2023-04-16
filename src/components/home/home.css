@@ -1,29 +1,28 @@
 .website-container {
   background-color: transparent;
   color: white;
-  text-shadow: 1px 1px 10px white;
+  text-shadow: 1px 1px 8px white;
 }
 .website-container .home-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-around;
   margin-bottom: 500px;
 }
 .website-container .home-container .home {
   height: 90vh;
-  width: 100vw;
+  width: 90vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .website-container .home-container .home .name-box {
-  margin-left: 100px;
   padding-bottom: 20vh;
   font-size: 6rem;
 }
 .website-container .home-container .home .description-box {
-  margin-right: 100px;
   padding-bottom: 20vh;
   font-size: 3rem;
 }
@@ -34,36 +33,10 @@
   display: flex;
   flex-direction: row;
 }
-.website-container .home-container .button-box .work-link {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.website-container .home-container .button-box .work-link::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: black;
-  transform: scaleX(0);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.website-container .home-container .button-box .work-link:hover {
-  color: darkgrey;
-  transition: color 200ms linear;
-}
-.website-container .home-container .button-box .work-link:hover:hover::before {
-  transform: scaleX(1);
-  background-color: darkgrey;
-}
-.website-container .home-container .button-box .contact-link {
+.website-container .home-container .button-box .link {
   position: relative;
 }
-.website-container .home-container .button-box .contact-link::before {
+.website-container .home-container .button-box .underline::before {
   content: "";
   position: absolute;
   display: block;
@@ -74,11 +47,11 @@
   transform: scaleX(0);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.website-container .home-container .button-box .contact-link:hover {
+.website-container .home-container .button-box .hover:hover {
   color: darkgrey;
   transition: color 200ms linear;
 }
-.website-container .home-container .button-box .contact-link:hover:hover::before {
+.website-container .home-container .button-box .hover:hover:hover::before {
   transform: scaleX(1);
   background-color: darkgrey;
 }

@@ -4,6 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 2;
 }
 .expanded-card-container .expanded-card {
   position: relative;
@@ -13,6 +14,7 @@
   width: 100vw;
   height: 100vh;
   transition: opacity 1s ease-out;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=expanded-card.css.map */
