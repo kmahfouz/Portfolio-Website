@@ -36,8 +36,9 @@ const Home = () => {
                 </div>
             </div>
             <div className={"button-box"}>
-                <div className={"work-link"} onClick={() => {setIsWork(true)}}>Work</div>
-                <div className={"contact-link"} onClick={() => {setIsContact(true)}}>Contact me</div>
+                <div className={"link hover underline"} onClick={() => {setIsWork(true)}}>Work</div>
+                <div className={"link hover underline"} onClick={() => {setIsContact(true)}}>Contact me</div>
+                <div className={"link hover underline"} onClick={() => {setIsContact(true)}}>Resume</div>
             </div>
         </div>
             <div className={"work-container"} ref={workRef}>

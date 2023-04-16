@@ -17,9 +17,9 @@ export const Card = () =>{
 
     return(
         <div className="card-container">
-            {/*<div className={"card-container-background"} ></div>*/}
+            <div className={"card-container-background"} ></div>
             <div className={"card-content"} >
-                <div className={isClicked ? "card expand-card" : "card"} onClick={()=>setIsClicked(true)} />
+                <div className={isClicked ? "card expand-card" : "card hover" } onClick={()=>setIsClicked(true)} />
                 <div className={"description"}>Brief description
                 <ul>
                     <li>Language</li>

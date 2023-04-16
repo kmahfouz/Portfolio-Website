@@ -6,5 +6,10 @@
   align-items: center;
   justify-content: space-around;
 }
+.work p {
+  font-size: 50pt;
+  position: relative;
+  bottom: 0;
+}
 
 /*# sourceMappingURL=work.css.map */

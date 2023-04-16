@@ -7,6 +7,7 @@ const Work = () => {
 
     return (
         <div className={"work"}>
+            <p> Projects</p>
             {cardArray.map((element,index) => {
                 return (
                    <Card index={index}></Card>
