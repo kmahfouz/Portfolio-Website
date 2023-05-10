@@ -5,7 +5,6 @@ import './orbitBackgroundStyles.scss';
 
 import vertexShader from './vertexShader';
 import fragmentShader from './fragmentShader';
-import {OrbitControls, PointerLockControls} from "@react-three/drei";
 
 const CustomGeometryParticles = (props) => {
     const { count } = props;
@@ -56,20 +55,6 @@ const CustomGeometryParticles = (props) => {
         [radius]
     );
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         const scrollPosition = window.scrollY;
-    //         const radius = (scrollPosition / maxScroll) * 3;
-    //         uniforms.uRadius.value = radius;
-    //         scrollRef.current = scrollPosition;
-    //     };
-    //
-    //     window.addEventListener("scroll", handleScroll);
-    //
-    //     return () => {
-    //         window.removeEventListener("scroll", handleScroll);
-    //     };
-    // }, [maxScroll, uniforms]);
     useEffect( () =>{
         window.scrollTo(0,0)
     },[])
@@ -77,7 +62,7 @@ const CustomGeometryParticles = (props) => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
             const radius = (scrollPosition / maxScroll) * scaleFactor;
-            uniforms.uRadius.value = -radius/10;
+            uniforms.uRadius.value = -radius/5;
             scrollRef.current = scrollPosition;
         };
 
