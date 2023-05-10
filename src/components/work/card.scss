@@ -1,8 +1,12 @@
 
-.card-container:nth-of-type(odd) .card-content{
+.card-container:nth-of-type(odd) .card-content {
   flex-direction: row-reverse;
 }
-.card-container{
+
+.card-container {
+  --card-height: 90%;
+  --card-width: 40%;
+
   display: flex;
   width: 90%;
   height: 60vh;
@@ -15,17 +19,17 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    top: 0%;
+    top: 0;
     left: 0;
     border-radius: 20px;
   }
+
   .card-content {
     z-index: 1;
     background-color: transparent;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    //outline: rebeccapurple solid 1px;
     padding: 0 100px;
     display: flex;
     flex-direction: row;
@@ -35,9 +39,10 @@
 
 
     .card {
+      position: relative;
       display: flex;
-      width: 40%;
-      height: 90%;
+      width: var(--card-width);
+      height: var(--card-height);
       padding: 10px;
       border-radius: 10px;
       box-sizing: border-box;
@@ -47,38 +52,63 @@
       background-color: grey;
       z-index: 1;
     }
-    .hover{
-    &:hover {
-      transform: scale(1.05);
-      transition: transform 500ms ease;
-    }
-    }
-    .hoverless-card{
-      display: flex;
-      width: 40%;
-      height: 90%;
-      padding: 10px;
-      border-radius: 10px;
-      box-sizing: border-box;
-      align-items: center;
-      justify-content: center;
-      transition: 500ms ease;
-      background-color: grey;
-      z-index: 1;
 
+    .hover {
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 500ms ease;
+      }
     }
 
     .description {
       z-index: 0;
       color: black;
-      //outline: blue solid 1px;
       align-items: center;
       font-size: 2rem;
     }
+  }
 
-    .expand-card {
-      transform: scale(10);
-      transition: transform ease-in 1s;
-    }
+  .expanded-card-wrapper {
+    position: relative;
+    width: var(--card-width);
+    height: var(--card-height);
+    //animation: expand 3s forwards;
+    z-index: 3000;
+  }
+  .shrink{
+    animation: poof 1s forwards;
+    background-color: gray;
+    border-radius: 50%;
+    transition: transform ease-in 3s;
+  }
+  .expand{
+    width: var(--card-width);
+    height: var(--card-height);
+    position: absolute;
+    background-color: gray;
+    transform: scale(3);
+    border-radius: 50% !important;
+    transition: transform linear 3s;
+    z-index: 3000;
   }
 }
+@keyframes poof {
+  100%{
+   width: 0;
+    height: 0;
+  }
+}
+//@keyframes expand {
+//  0%{
+//    width: var(--card-width);
+//    height: var(--card-height);
+//  }
+//  99%{
+//    min-width: 100vw;
+//    min-height: 100vh;
+//  }
+//  100%{
+//    border-radius: 0%;
+//  }
+//}
+//

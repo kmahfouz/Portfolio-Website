@@ -17,8 +17,3 @@ const Work = () => {
     )
 }
 export default Work
-
-/*
-TODO: figure out how to pass ExpandedCard information
-the issue with setstyle is that its setting every card container. so it wont work. i need it to set the element iteslf within that first map
- */

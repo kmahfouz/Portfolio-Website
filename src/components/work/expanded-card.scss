@@ -1,18 +1,44 @@
+
 .expanded-card-container{
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 2;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  background-color: blue;
+  flex: 1 1 auto;
+  width: 100px;
+  height: 100px;
   .expanded-card{
-    position: relative;
-    top: 0;
-    left: 0;
+    outline: red;
+    //position: relative;
     font-size: 40pt;
-    width: 100vw;
-    height: 100vh;
     transition: opacity 1s ease-out;
-    z-index: 2;
+    z-index: 3;
+    //animation: expand 0.5 forwards ;
+  }
+  .minimize{
+    animation: minimize 1s forwards;
   }
 }
+
+//@keyframes expand {
+//  from{
+//    width: 0vw;
+//    height: 0vh;
+//  }
+//  to{
+//    width: 100vw;
+//    height: 100vh;
+//  }
+//}
+//@keyframes minimize {
+//
+//  from{
+//    width: 100vw;
+//    height: 100vh;
+//  }
+//  to{
+//    width: 0vw;
+//    height: 0vh;
+//  }
+//}
