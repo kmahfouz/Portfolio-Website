@@ -10,11 +10,7 @@ export const Card = () => {
 
     const setClickedState = () => {
         setClickCounter(current => current + 1)
-
     }
-    useEffect(()=>{
-        console.log(`card clicks ${clickCounter}`)
-    },[clickCounter])
 
     useEffect(()=>{
         const card = cardRef.current
@@ -22,11 +18,8 @@ export const Card = () => {
         const getElementCenterPosition = () => {
             const rect = card.getBoundingClientRect();
             const parentRect = parent.getBoundingClientRect();
-
             const elementCenterX = rect.left - parentRect.left + rect.width/2;
             const elementCenterY = rect.height/2 ;
-
-            console.log(rect)
             return { x: elementCenterX, y: elementCenterY };
         };
         const position = getElementCenterPosition();

@@ -1,5 +1,5 @@
 import {Canvas, useFrame} from "@react-three/fiber";
-import {createRef, useEffect, useMemo, useRef} from "react";
+import {useEffect, useMemo, useRef} from "react";
 import * as THREE from "three";
 import './orbitBackgroundStyles.scss';
 
