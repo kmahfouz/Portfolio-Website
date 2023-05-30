@@ -1,70 +1,51 @@
 import './card.scss'
 import {ExpandedCard} from "./expanded-card";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 export const Card = () => {
 
     const [clickCounter, setClickCounter] = useState(0)
-    const [isMinimized, setIsMinimized] = useState(false)
+    const [centerPosition, setCenterPosition] = useState(null)
+    const cardRef = useRef(null)
 
     const setClickedState = () => {
-        setClickCounter(clickCounter + 1)
+        setClickCounter(current => current + 1)
+
     }
-    const setMinimizedState = (bool) => {
-        setIsMinimized(bool)
-    }
+    useEffect(()=>{
+        console.log(`card clicks ${clickCounter}`)
+    },[clickCounter])
 
-    let mounted = false
-    useEffect(() => {
-            if (mounted === true) {
-                console.log("what")
-                if (!(clickCounter === 0) && clickCounter % 2 === 0) {
-                    setIsMinimized(true)
-                }
-            } else {
-                mounted = true
-            }
-        },
-        [clickCounter])
+    useEffect(()=>{
+        const card = cardRef.current
+        const parent = card.parentElement
+        const getElementCenterPosition = () => {
+            const rect = card.getBoundingClientRect();
+            const parentRect = parent.getBoundingClientRect();
 
-//should be minimized after it is clicked for teh second time
+            const elementCenterX = rect.left - parentRect.left + rect.width/2;
+            const elementCenterY = rect.height/2 ;
 
-    const setContent = () => {
-
-        console.log('clicked ' + clickCounter)
-        console.log('minimized ' + isMinimized)
-
-        if (clickCounter === 0){
-            return <div></div>
-
-        } else if(clickCounter % 2 === 0 && isMinimized) {
-            return <div className={'expanded-card-wrapper shrink'}></div>
-        }
-        else{
-            return (<div className={'expanded-card-wrapper expand'}>
-                <ExpandedCard minimize={setMinimizedState} click={setClickedState}></ExpandedCard>
-            </div>)
-
-        }
-    }
+            console.log(rect)
+            return { x: elementCenterX, y: elementCenterY };
+        };
+        const position = getElementCenterPosition();
+        setCenterPosition(position)
+    },[])
 
     return (
         <div className="card-container">
             <div className={"card-container-background"}></div>
-            <div className={"card-content"}>
-                <div className={"card hover"} onClick={() => {setClickedState()
+            <div className={"card-content"} >
+                <div className={"card hover"} ref={cardRef} onClick={() => {setClickedState()
                 }}/>
-                {
-                    setContent()
-                }
-                <div className={"description"}>Brief description
+                <div className={"description"} >Brief description
                     <ul>
                         <li>Language</li>
                         <li>Framework</li>
                     </ul></div>
             </div>
-
-
+            <ExpandedCard coords={centerPosition} clickCounter={clickCounter} setClickedState={setClickedState}></ExpandedCard>
         </div>
     )
 }
