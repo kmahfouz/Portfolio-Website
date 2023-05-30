@@ -1,21 +1,33 @@
 import './expanded-card.scss'
-import {createRef, useEffect, useState} from "react";
+import {useEffect} from "react";
 
-export const ExpandedCard = (props) => {
+export const ExpandedCard = ({clickCounter,setClickedState, coords}) => {
 
-    const elementRef = createRef()
-    const [showContent,setShowContent] = useState(false)
+    // const elementRef = createRef()
 
-     useEffect(()=>{
-         setTimeout(() =>{setShowContent(true)},700)
-     },[])
+    let posX = 0
+    let posY = 0
+        if(coords){
+            posX = coords.x
+            posY = coords.y
+        }
+
+    let styles = {
+        top : posY,
+        left: posX
+    }
+
+    useEffect(()=>{
+        console.log("expanded card " + clickCounter)
+     },[clickCounter])
     return(
-    <div className={`expanded-card-container `} ref={elementRef} onClick={()=>{
-        props.minimize(true)
-        props.click()
-    }}>
-        {/*{ showContent ?  <div className={"expanded-card"}> hello </div> :""}*/}
-    </div>
+        <div>
+            <div style={styles} className={`expanded-card-container ${(clickCounter === 0) ? "" : (clickCounter %2 ===0)? "shrink" : "expand"}`} onClick={()=>{
+                setClickedState()
+            }}> </div>
+            {/*{ showContent ?  <div className={"expanded-card"}> hello </div> :""}*/}
+        </div>
+
 
     )
 }

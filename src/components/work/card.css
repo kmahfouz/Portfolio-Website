@@ -5,9 +5,11 @@
 .card-container {
   --card-height: 90%;
   --card-width: 40%;
+  --card-container-height:60vh;
+  --card-container-width:90%;
   display: flex;
-  width: 90%;
-  height: 60vh;
+  width: var(--card-container-width);
+  height: var(--card-container-height);
   margin: 20px 0 100px 0;
   position: relative;
 }
@@ -35,13 +37,12 @@
   align-items: center;
 }
 .card-container .card-content .card {
+  box-sizing: border-box;
   position: relative;
   display: flex;
   width: var(--card-width);
   height: var(--card-height);
-  padding: 10px;
   border-radius: 10px;
-  box-sizing: border-box;
   align-items: center;
   justify-content: center;
   transition: 500ms ease;
@@ -59,33 +60,10 @@
   font-size: 2rem;
 }
 .card-container .expanded-card-wrapper {
-  position: relative;
-  width: var(--card-width);
-  height: var(--card-height);
-  z-index: 3000;
-}
-.card-container .shrink {
-  animation: poof 1s forwards;
-  background-color: gray;
-  border-radius: 50%;
-  transition: transform ease-in 3s;
-}
-.card-container .expand {
-  width: var(--card-width);
-  height: var(--card-height);
   position: absolute;
-  background-color: gray;
-  transform: scale(3);
-  border-radius: 50% !important;
-  transition: transform linear 3s;
-  z-index: 3000;
-}
-
-@keyframes poof {
-  100% {
-    width: 0;
-    height: 0;
-  }
+  width: var(--card-width);
+  height: var(--card-height);
+  z-index: 3;
 }
 
 /*# sourceMappingURL=card.css.map */

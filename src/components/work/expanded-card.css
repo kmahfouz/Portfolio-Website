@@ -1,12 +1,11 @@
 .expanded-card-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  --max-scale: 15;
+  position: absolute;
   z-index: 3;
-  background-color: blue;
   flex: 1 1 auto;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
+  transform: translate(50%);
 }
 .expanded-card-container .expanded-card {
   outline: red;
@@ -14,8 +13,34 @@
   transition: opacity 1s ease-out;
   z-index: 3;
 }
-.expanded-card-container .minimize {
-  animation: minimize 1s forwards;
+
+.shrink {
+  animation: shrink 1s forwards;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.expand {
+  background-color: grey;
+  animation: grow 1s forwards;
+  border-radius: 50%;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(var(--max-scale));
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(var(--max-scale));
+  }
 }
 
 /*# sourceMappingURL=expanded-card.css.map */
