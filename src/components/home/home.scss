@@ -1,6 +1,7 @@
 .website-container {
   background-color: transparent;
   color: white;
+  font-family: Raleway;
   text-shadow: 1px 1px 8px white;
 
   .home-container {
@@ -22,7 +23,13 @@
       .name-box {
         padding-bottom: 20vh;
         font-size: 6rem;
+        p{
+          font-family: Raleway;
+          font-weight:200;
+          margin: 0;
+          text-shadow: 0px 0px 10px white;
 
+        }
       }
 
       .description-box {
@@ -68,4 +75,12 @@
   .work-container {
   margin-bottom: 500px;
   }
+}
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url("../../../public/font/SpaceGrotesk-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url("../../../public/font/Raleway-VariableFont_wght.ttf");
 }

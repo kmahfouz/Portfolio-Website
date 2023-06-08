@@ -1,3 +1,6 @@
+//TODO: change content to columns, find font, make header mroe headery
+
+
 
 .card-container:nth-of-type(odd) .card-content {
   flex-direction: row-reverse;
@@ -10,16 +13,23 @@
   --card-container-height:60vh;
   --card-container-width:90%;
 
+  --p-fontsize:2rem;
+  --h1-fontsize:4rem;
+
   display: flex;
   width: var(--card-container-width);
-  height: var(--card-container-height);
+  min-height: var(--card-container-height);
   margin: 20px 0 100px 0;
   position: relative;
+  padding: 30px 40px;
+
+  font-family: SpaceGrotesk;
 
   .card-container-background {
+    outline: 7px slategrey solid;
     background-color: floralwhite;
     z-index: -1;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -32,14 +42,11 @@
     background-color: transparent;
     box-sizing: border-box;
     width: 100%;
-    height: 100%;
-    padding: 0 100px;
+    min-height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     alignment: center;
     align-items: center;
-
 
     .card {
       box-sizing: border-box;
@@ -62,11 +69,45 @@
       }
     }
 
-    .description {
-      z-index: 0;
-      color: black;
+    .description-container {
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      font-size: 2rem;
+      justify-content: space-evenly;
+      width:60%;
+      height: 100%;
+      margin: 0 40px;
+      h1 {
+        flex-basis: 20%;
+        text-shadow: 1px 1px 5px darkgrey;
+        color: black;
+        font-size: var(--h1-fontsize);
+        text-decoration: underline 10px solid;
+      }
+
+      .description {
+        flex-basis: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        z-index: 0;
+        border-radius: 10px;
+        color: black;
+        padding: 0;
+        .paragraph{
+          font-size: var(--p-fontsize);
+          flex-basis: 60%;
+          }
+        .list{
+          font-size: var(--p-fontsize);
+          flex-basis: 40%;
+        }
+        &::after{
+          content:"";
+
+        }
+      }
     }
   }
 
@@ -77,4 +118,12 @@
     z-index: 3;
   }
 
+}
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url("../../../public/font/SpaceGrotesk-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url("../../../public/font/Raleway-VariableFont_wght.ttf");
 }

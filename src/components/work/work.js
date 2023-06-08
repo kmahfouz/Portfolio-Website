@@ -1,16 +1,16 @@
 import "./work.scss"
 import {Card} from './card'
+import data from '../../project-info.json'
 const Work = () => {
 
 
-    const cardArray = [1, 2, 3, 4]
 
     return (
         <div className={"work"}>
             <p> Projects</p>
-            {cardArray.map((element,index) => {
+            {data.map((element,index) => {
                 return (
-                   <Card index={index}></Card>
+                   <Card index={index} data={element}></Card>
                 )
             })}
         </div>

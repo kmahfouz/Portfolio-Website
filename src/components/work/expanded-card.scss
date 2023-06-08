@@ -8,10 +8,12 @@
   width: 200px;
   height: 200px;
   box-sizing: border-box;
+
 }
 .expanded-card{
   padding: 30px;
   z-index: 5;
+  overflow: auto;
 
   position: fixed;
   width: calc(100% - 120px);
@@ -20,7 +22,7 @@
 
   outline: red 1px solid;
   font-size: 2rem;
-  transition: opacity 1s ease-out;
+  animation: fade-in 1.4s forwards;
 
   .content-container{
     display: flex;
@@ -33,7 +35,9 @@
       outline: palegoldenrod 1px solid;
     }
     .details-container{
+      overflow: scroll;
       width: 50%;
+      height: 80vh;
       outline: rebeccapurple 1px solid;
     }
   }
@@ -63,5 +67,16 @@
   }
   to{
     transform: scale(var(--max-scale));
+  }
+}
+@keyframes fade-in {
+  0%{
+    opacity: 0%;
+  }
+  80%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
   }
 }

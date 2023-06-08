@@ -29,7 +29,7 @@ const Home = () => {
                 <div className={"name-box"}>
                     Karim Mahfouz
                     <br/>
-                    Software Developer
+                    <p>Software Developer</p>
                 </div>
                 <div className={"description-box"}>
                     Hello there

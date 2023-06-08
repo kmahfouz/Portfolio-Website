@@ -2,12 +2,13 @@ import './card.scss'
 import {ExpandedCard} from "./expanded-card";
 import {useEffect, useRef, useState} from "react";
 
-export const Card = () => {
+export const Card = ({index,data}) => {
 
     const [clickCounter, setClickCounter] = useState(0)
     const [centerPosition, setCenterPosition] = useState(null)
     const cardRef = useRef(null)
-
+    const tools = data.tools
+    const description = data.description
     const setClickedState = () => {
         setClickCounter(current => current + 1)
     }
@@ -26,17 +27,32 @@ export const Card = () => {
         setCenterPosition(position)
     },[])
 
+
     return (
         <div className="card-container">
             <div className={"card-container-background"}></div>
             <div className={"card-content"} >
                 <div className={"card hover"} ref={cardRef} onClick={() => {setClickedState()
                 }}/>
-                <div className={"description"} >Brief description
-                    <ul>
-                        <li>Language</li>
-                        <li>Framework</li>
-                    </ul></div>
+                <div className={'description-container'}>
+                    <h1>{data.title}</h1>
+                    <div className={"description"} >
+                        <div className={"paragraph"}>
+                            {description.brief}
+                        </div>
+                        <div>
+                            <ul className={'list'}>
+                                {Object.values(tools).map((tool)=>{
+                                    return(
+                                        <li> {tool}</li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                     </div>
+                </div>
+
+
             </div>
             <ExpandedCard coords={centerPosition} clickCounter={clickCounter} setClickedState={setClickedState}></ExpandedCard>
         </div>
