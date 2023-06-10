@@ -2,7 +2,7 @@
   background-color: transparent;
   color: white;
   font-family: Raleway;
-  text-shadow: 1px 1px 8px white;
+  text-shadow: 0px 0px 8px white;
 
   .home-container {
     display: flex;
@@ -15,11 +15,11 @@
     .home {
       height: 90vh;
       width: 90vw;
+
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-
       .name-box {
         padding-bottom: 20vh;
         font-size: 6rem;
@@ -33,6 +33,7 @@
       }
 
       .description-box {
+        flex-basis: 30%;
         padding-bottom: 20vh;
         font-size: 3rem;
       }

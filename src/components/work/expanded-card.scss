@@ -1,8 +1,6 @@
 
 .expanded-card-container{
-
-  --max-scale: 16;
-
+  --max-scale: calc(20);
   position: absolute;
   z-index: 3;
   width: 200px;

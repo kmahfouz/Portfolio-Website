@@ -4,7 +4,7 @@ import data from '../../project-info.json'
 const Work = () => {
 
 
-
+//TODO: Orchid,rob boss
     return (
         <div className={"work"}>
             <p> Projects</p>

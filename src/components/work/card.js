@@ -2,7 +2,7 @@ import './card.scss'
 import {ExpandedCard} from "./expanded-card";
 import {useEffect, useRef, useState} from "react";
 
-export const Card = ({index,data}) => {
+export const Card = ({data}) => {
 
     const [clickCounter, setClickCounter] = useState(0)
     const [centerPosition, setCenterPosition] = useState(null)
@@ -18,8 +18,7 @@ export const Card = ({index,data}) => {
         const parent = card.parentElement
         const getElementCenterPosition = () => {
             const rect = card.getBoundingClientRect();
-            const parentRect = parent.getBoundingClientRect();
-            const elementCenterX = rect.left - parentRect.left + rect.width/2;
+            const elementCenterX = rect.left + rect.width/2;
             const elementCenterY = rect.height/2 ;
             return { x: elementCenterX, y: elementCenterY };
         };
@@ -51,10 +50,9 @@ export const Card = ({index,data}) => {
                         </div>
                      </div>
                 </div>
-
-
             </div>
-            <ExpandedCard coords={centerPosition} clickCounter={clickCounter} setClickedState={setClickedState}></ExpandedCard>
+            <ExpandedCard coords={centerPosition} clickCounter={clickCounter} setClickedState={setClickedState} projectData={data}></ExpandedCard>
+
         </div>
     )
 }

@@ -11,7 +11,7 @@ const CustomGeometryParticles = (props) => {
     const radius = 5;
     const maxScroll = 1000;
     const scrollRef = useRef(0);
-    const scaleFactor = 5
+    const scaleFactor = 1
 
     const points = useRef();
 
@@ -32,7 +32,7 @@ const CustomGeometryParticles = (props) => {
             const scrollFactor = (initialScroll / maxScroll);
             const angle = Math.atan2(y, x);
             const distanceFromCenter = Math.sqrt(x*x + y*y + z*z);
-            const distanceFromAxis = distanceFromCenter * Math.sin(angle + scrollFactor * Math.PI * 2);
+            const distanceFromAxis = distanceFromCenter * Math.sin(angle + scrollFactor * Math.PI);
             x = distanceFromAxis * Math.cos(theta) * Math.cos(phi);
             y = distanceFromAxis * Math.cos(theta) * Math.sin(phi);
             z = distanceFromAxis * Math.sin(theta);

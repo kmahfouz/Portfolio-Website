@@ -1,7 +1,8 @@
 .website-container {
   background-color: transparent;
   color: white;
-  text-shadow: 1px 1px 8px white;
+  font-family: Raleway;
+  text-shadow: 0px 0px 8px white;
 }
 .website-container .home-container {
   display: flex;
@@ -22,7 +23,14 @@
   padding-bottom: 20vh;
   font-size: 6rem;
 }
+.website-container .home-container .home .name-box p {
+  font-family: Raleway;
+  font-weight: 200;
+  margin: 0;
+  text-shadow: 0px 0px 10px white;
+}
 .website-container .home-container .home .description-box {
+  flex-basis: 30%;
   padding-bottom: 20vh;
   font-size: 3rem;
 }
@@ -57,6 +65,15 @@
 }
 .website-container .work-container {
   margin-bottom: 500px;
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("../../../public/font/SpaceGrotesk-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../../../public/font/Raleway-VariableFont_wght.ttf");
 }
 
 /*# sourceMappingURL=home.css.map */

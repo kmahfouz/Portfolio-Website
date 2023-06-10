@@ -32,7 +32,7 @@ const Home = () => {
                     <p>Software Developer</p>
                 </div>
                 <div className={"description-box"}>
-                    Hello there
+                    Bringing Ideas to Life Through Code
                 </div>
             </div>
             <div className={"button-box"}>
