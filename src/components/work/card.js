@@ -15,7 +15,6 @@ export const Card = ({data}) => {
 
     useEffect(()=>{
         const card = cardRef.current
-        const parent = card.parentElement
         const getElementCenterPosition = () => {
             const rect = card.getBoundingClientRect();
             const elementCenterX = rect.left + rect.width/2;
@@ -24,7 +23,7 @@ export const Card = ({data}) => {
         };
         const position = getElementCenterPosition();
         setCenterPosition(position)
-    },[])
+    },[cardRef, clickCounter])
 
 
     return (
@@ -41,9 +40,9 @@ export const Card = ({data}) => {
                         </div>
                         <div>
                             <ul className={'list'}>
-                                {Object.values(tools).map((tool)=>{
+                                {Object.values(tools).map((tool,index)=>{
                                     return(
-                                        <li> {tool}</li>
+                                        <li key={index}> {tool}</li>
                                     )
                                 })}
                             </ul>

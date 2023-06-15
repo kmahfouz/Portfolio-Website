@@ -2,11 +2,12 @@ import {Canvas, useFrame} from "@react-three/fiber";
 import {useEffect, useMemo, useRef} from "react";
 import * as THREE from "three";
 import './orbitBackgroundStyles.scss';
-
 import vertexShader from './vertexShader';
 import fragmentShader from './fragmentShader';
 
-const CustomGeometryParticles = (props) => {
+
+
+function CustomGeometryParticles (props) {
     const { count } = props;
     const radius = 5;
     const maxScroll = 1000;
@@ -104,7 +105,7 @@ const CustomGeometryParticles = (props) => {
             />
         </points>
     );
-};
+}
 
 const Scene = () => {
     const COUNT = 7000
@@ -119,5 +120,4 @@ const Scene = () => {
         </div>
     );
 };
-
 export default Scene;

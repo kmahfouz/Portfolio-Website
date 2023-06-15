@@ -1,6 +1,7 @@
 [
   {
     "title": "Unsung Heroes",
+    "link" : "https://heroes.apsoprojects.org/",
     "tools": [
       "ReactJS",
       "JavaScript",
@@ -68,8 +69,7 @@
       "and stuff"
     ],
     "description": {
-      "brief": "PetSlide is a delightful React component designed to be a part of a larger architecture for displaying information on TV Boards within the office. This component integrates with Slack, allowing users to showcase images from Slack channels on the TV Board. PetSlide adds a touch of joy to the office environment.",
-      "long": "PetSlide is a captivating React component that serves as part of an extensive architecture designed to display information on TV Boards within the office. This component introduces a way to share images from Slack channels and showcase them on the TV Board. The integration with the Slack API enables PetSlide to pull images directly from designated Slack channels, while also setting appropriate permissions. This integration simplifies the process of sharing visual content, fostering a dynamic and engaging environment within the office. With its fun and cute design, PetSlide adds a touch of delight to the TV Board experience. The component is integrated into the larger system and is able to be slotted in and out of the TVBoard panels with ease, allowing us to display different content when needed."
-    }
+      "brief": "",
+      "long": ""}
   }
 ]

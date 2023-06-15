@@ -11,18 +11,15 @@ export const ExpandedCard = ({clickCounter, setClickedState, coords, projectData
 
     let posX = 0
     let posY = 0
-    let width
-    let height
 
     if (coords) {
-        posX = coords.x - 200
-        posY = coords.y - 100
+        posX = coords.x -200
+        posY = coords.y
     }
     let styles = {
         top: posY,
         left: posX
     }
-
 
     useEffect(() => {
         if (clickCounter % 2 === 0) {
