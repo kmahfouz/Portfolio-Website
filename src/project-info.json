@@ -1,7 +1,7 @@
 [
   {
     "title": "Unsung Heroes",
-    "link" : "https://heroes.apsoprojects.org/",
+    "link": "https://heroes.apsoprojects.org/",
     "tools": [
       "ReactJS",
       "JavaScript",
@@ -16,6 +16,7 @@
   },
   {
     "title": "MUTT Board Quiz",
+    "link": "",
     "tools": [
       "ReactJS",
       "JavaScript",
@@ -30,8 +31,14 @@
   },
   {
     "title": "CCIM Quiz",
-    "tools": ["ReactJS", "JavaScript", "HTML", "CSS", "CSS Animations"],
     "link": "https://ccimquiz.apsoprojects.org/",
+    "tools": [
+      "ReactJS",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "CSS Animations"
+    ],
     "description": {
       "brief": "The CCIM Quiz is a dynamic web application developed using ReactJS. It serves as a helpful tool for incoming freshmen, allowing them to determine which professors align with their preferences and characteristics. The quiz pulls data from a JSON file, ensuring flexibility and easy updates.",
       "long": "The CCIM Quiz is an innovative web application designed specifically for incoming freshmen at the CCIM. The goal of the project was to assist students in selecting professors who resonate with their preferences and characteristics. Built with ReactJS, JavaScript, and CSS animations, this quiz offers a dynamic and interactive experience. The React site is able to dynamically pull quiz questions and options from a JSON file. This approach ensures flexibility and easy updates, allowing the quiz to be adapted as needed without the need for hardcoding. By leveraging ReactJS's component-based architecture, the application efficiently renders the quiz content based on the data retrieved from the JSON file. A notable achievement within this project lies in the implementation of CSS animations. One particular animation that stands out is the unique behavior where pressing an option triggers a red button animation, starting precisely from the location the user clicks on. This feature required determining the exact mouse position and initiating the CSS animation from that precise point. The result is an engaging and visually appealing interaction that enhances the user experience. In contrast to using a grid of squares, which is a common approach, the CCIM Quiz leverages the exact location where the user presses on an option. This level of precision contributes to a more immersive and intuitive user interface. By personalizing the animation to the user's specific interaction, the application showcases a high level of attention to detail and provides a seamless and enjoyable user experience. The web application's responsive design ensures that incoming freshmen can access and take the quiz on various devices, including desktops, laptops, tablets, and mobile phones. This adaptability allows students to conveniently explore and engage with the quiz, regardless of their preferred device. Overall, the CCIM Quiz demonstrates the capabilities of ReactJS, JavaScript, HTML, CSS, and CSS animations in creating an interactive and visually appealing web application. Its ability to assist incoming freshmen in selecting professors who align with their preferences, combined with the unique button animation, highlights the project's impact on enhancing the user experience and promoting informed decision-making. By providing an intuitive and personalized quiz experience, the CCIM Quiz empowers students to make informed choices about their academic journey, fostering a positive and tailored learning environment within the CCIM."
@@ -39,6 +46,7 @@
   },
   {
     "title": "Digital Corps HQ Backend",
+    "link": "",
     "tools": [
       "AdonisJS",
       "Node.js",
@@ -52,6 +60,7 @@
   },
   {
     "title": "PetSlide",
+    "link": "",
     "tools": [
       "ReactJS",
       "Slack API"
@@ -70,6 +79,7 @@
     ],
     "description": {
       "brief": "",
-      "long": ""}
+      "long": ""
+    }
   }
 ]
