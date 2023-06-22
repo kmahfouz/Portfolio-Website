@@ -1,5 +1,4 @@
 
-
 .card-container:nth-of-type(odd) .card-content {
   flex-direction: row-reverse;
 }
@@ -21,7 +20,7 @@
   position: relative;
   padding: 30px 40px 40px 40px;
 
-  font-family: SpaceGrotesk;
+  font-family: SpaceGrotesk, serif;
 
   .card-container-background {
     background-color: #F6EED6;
@@ -46,7 +45,12 @@
     align-items: center;
     gap: 5%;
 
-    .card {
+    .card{
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: lightgray;
+      object-fit: contain;
       box-sizing: border-box;
       position: relative;
       display: flex;
@@ -56,10 +60,8 @@
       align-items: center;
       justify-content: center;
       transition: 500ms ease;
-      background-color: grey;
       z-index: 1;
     }
-
     .hover {
       &:hover {
         transform: scale(1.05);

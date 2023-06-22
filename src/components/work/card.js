@@ -6,13 +6,19 @@ export const Card = ({data}) => {
 
     const [clickCounter, setClickCounter] = useState(0)
     const [centerPosition, setCenterPosition] = useState(null)
+    const [backgroundImg, setBackgroundImg] = useState('')
+
     const cardRef = useRef(null)
     const tools = data.tools
     const description = data.description
     const setClickedState = () => {
         setClickCounter(current => current + 1)
     }
-
+    useEffect(()=>{
+       if(data.images){
+           setBackgroundImg(data.images[0])
+       }
+    },[data.images])
     useEffect(()=>{
         const card = cardRef.current
         const getElementCenterPosition = () => {
@@ -26,12 +32,16 @@ export const Card = ({data}) => {
     },[cardRef, clickCounter])
 
 
+    const styles = {
+        backgroundImage: `url(${backgroundImg})`,
+    }
     return (
         <div className="card-container">
             <div className={"card-container-background"}></div>
             <div className={"card-content"} >
-                <div className={"card hover"} ref={cardRef} onClick={() => {setClickedState()
-                }}/>
+                <div style={styles} className={"card hover"} ref={cardRef} onClick={() => {setClickedState()
+                }}>
+                    {backgroundImg === "" ? <h1>Coming Soon</h1> : ""}</div>
                 <div className={'description-container'}>
                     <h1>{data.title}</h1>
                     <div className={"description"} >
