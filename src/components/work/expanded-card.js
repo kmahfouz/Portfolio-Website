@@ -6,6 +6,7 @@ export const ExpandedCard = ({clickCounter, setClickedState, coords, projectData
 
     const [showContent, setShowContent] = useState(false)
     const [backgroundImg, setBackgroundImg] = useState( "")
+    const [images,setImages] = useState([])
 
     const imageContainer = useRef(null)
     const detailsContainer = useRef(null)
@@ -14,9 +15,7 @@ export const ExpandedCard = ({clickCounter, setClickedState, coords, projectData
     useEffect(()=>{
         if(projectData.images){
             setBackgroundImg(projectData.images[0])
-        }
-        else{
-            setBackgroundImg(``)
+            setImages(projectData.images)
         }
     },[projectData.images])
 
@@ -26,14 +25,6 @@ export const ExpandedCard = ({clickCounter, setClickedState, coords, projectData
     if (coords) {
         posX = coords.x -200
         posY = coords.y
-    }
-    let posStyle = {
-        top: posY,
-        left: posX,
-
-    }
-    const backgroundStyle ={
-        backgroundImage: `url(${backgroundImg})`,
     }
 
     useEffect(() => {
@@ -45,6 +36,16 @@ export const ExpandedCard = ({clickCounter, setClickedState, coords, projectData
             setShowContent(true)
         }
     }, [clickCounter])
+
+
+    let posStyle = {
+        top: posY,
+        left: posX,
+    }
+    const backgroundStyle ={
+        backgroundImage: `url(${backgroundImg})`,
+    }
+
     return (
         <>
             <div style={posStyle}
@@ -55,14 +56,16 @@ export const ExpandedCard = ({clickCounter, setClickedState, coords, projectData
            >
             </div>
             {showContent ?
-
                 <div style={backgroundStyle} className={"expanded-card"} onClick={() => {
                     setClickedState()
                 }}
                 >
                     <div className={'content-container'}>
                         <div className={"image-container"} ref={imageContainer}>
-                            <img src="../../logo.svg" alt="logo"/>
+                            {images.map((image)=>{
+                               return <div className={'image'}><img src={`${image}`} alt="project" width="100%" height="100%" /></div>
+                            })}
+
                         </div>
                         <div className={"details-container"} ref={detailsContainer}>
                             {projectData.description.long}
@@ -71,7 +74,5 @@ export const ExpandedCard = ({clickCounter, setClickedState, coords, projectData
                 </div>
                 : ""}
         </>
-
-
     )
 }

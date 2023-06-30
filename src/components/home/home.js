@@ -29,7 +29,7 @@ const Home = () => {
                 <div className={"name-box"}>
                     Karim Mahfouz
                     <br/>
-                    <p>Software Developer</p>
+                    <p>Software Engineer</p>
                 </div>
                 <div className={"description-box"}>
                     Bringing Ideas to Life Through Code
