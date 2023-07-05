@@ -62,8 +62,15 @@ export const ExpandedCard = ({clickCounter, setClickedState, coords, projectData
                 >
                     <div className={'content-container'}>
                         <div className={"image-container"} ref={imageContainer}>
-                            {images.map((image)=>{
-                               return <div className={'image'}><img src={`${image}`} alt="project" width="100%" height="100%" /></div>
+                            {images.map((image,index)=>{
+                                const fileExtension = image.substring(image.lastIndexOf('.')).toLowerCase();
+                                return (
+                                   <div className={'image'}>
+                                       {(fileExtension ===".mp4") ?
+                                           <video src={`${image}`} width={'100%'} height={'100%'} controls/>
+                                           :
+                                           <img src={`${image}`} alt="project" width="100%" height="100%" /> }
+                                   </div>)
                             })}
 
                         </div>
