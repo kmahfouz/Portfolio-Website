@@ -42,7 +42,7 @@
 .expanded-card .content-container .image-container .image {
   margin: 0 0 30px 0;
 }
-.expanded-card .content-container .image-container .image img {
+.expanded-card .content-container .image-container .image img, .expanded-card .content-container .image-container video {
   border-radius: 10px;
   margin: 0;
   padding: 0;
