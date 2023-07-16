@@ -48,7 +48,7 @@
       "images/ccimQuiz/ccim4.png",
       "images/ccimQuiz/ccim6.png",
       "images/ccimQuiz/ccim7.png",
-      "images/ccimQuiz/ccimvid.mov"
+      "images/ccimQuiz/ccimvid.mp4"
     ],
     "link": "https://ccimquiz.apsoprojects.org/",
     "tools": [
@@ -75,18 +75,6 @@
     "description": {
       "brief": "The Digital Corps HQ Backend is a transformative project that aims to change the project intake process within the Digital Corps. By moving away from spreadsheets and adopting a comprehensive database solution, this backend system facilitates efficient management of teams, employees, clients, projects, and more.",
       "long": "The Digital Corps HQ Backend project represents a significant milestone in streamlining the project intake process within the Digital Corps. With the goal of replacing outdated spreadsheet-based workflows, the backend system offers a comprehensive database solution built with AdonisJS, Node.js, MySQL, and Next.js. One of the primary objectives of the Digital Corps HQ Backend is to centralize and organize critical project information. By leveraging AdonisJS, a robust and scalable Node.js framework, the backend system enables efficient storage and retrieval of data related to teams, employees, clients, and projects, among other things. This ensures that all essential information is easily accessible and securely managed. Next.js, a popular React framework, is employed to facilitate the transition from the previous Create React App setup. Next.js offers enhanced server-side rendering (SSR) capabilities, improved SEO performance, and advanced routing features. By utilizing Next.js, the Digital Corps HQ Backend ensures an improved overall project intake functionality. While the backend implementation is complete, the ongoing development focuses on building the front-end dashboard. This dashboard will serve as a comprehensive interface to facilitate data intake and display. By leveraging the power of React and Next.js, the front-end dashboard will provide an intuitive and user-friendly experience, empowering the Digital Corps project management team to efficiently handle project intake, assign resources, track progress, and generate meaningful reports. The Digital Corps HQ Backend project represents a significant step forward in transforming the project intake process within the Digital Corps. By replacing spreadsheets with a robust AdonisJS backend, supported by Node.js, MySQL, and Next.js, the system centralizes data, improves data management efficiency, and lays the groundwork for the development of a powerful front-end dashboard. By establishing a solid foundation for project intake, the backend system sets the stage for increased productivity, streamlined workflows, and improved decision-making processes within the Digital Corps."
-    }
-  },
-  {
-    "title": "PetSlide",
-    "link": "",
-    "tools": [
-      "ReactJS",
-      "Slack API"
-    ],
-    "description": {
-      "brief": "PetSlide is a delightful React component designed to be a part of a larger architecture for displaying information on TV Boards within the office. This component integrates with Slack, allowing users to showcase images from Slack channels on the TV Board. PetSlide adds a touch of joy to the office environment.",
-      "long": "PetSlide is a captivating React component that serves as part of an extensive architecture designed to display information on TV Boards within the office. This component introduces a way to share images from Slack channels and showcase them on the TV Board. The integration with the Slack API enables PetSlide to pull images directly from designated Slack channels, while also setting appropriate permissions. This integration simplifies the process of sharing visual content, fostering a dynamic and engaging environment within the office. With its fun and cute design, PetSlide adds a touch of delight to the TV Board experience. The component is integrated into the larger system and is able to be slotted in and out of the TVBoard panels with ease, allowing us to display different content when needed."
     }
   },
   {

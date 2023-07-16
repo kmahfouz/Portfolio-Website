@@ -8,6 +8,7 @@ import fragmentShader from './fragmentShader';
 
 
 function CustomGeometryParticles (props) {
+    console.log('hi')
     const { count } = props;
     const radius = 5;
     const maxScroll = 1000;
@@ -50,7 +51,7 @@ function CustomGeometryParticles (props) {
                 value: 0.0,
             },
             uRadius: {
-                value: radius,
+                value: radius? radius :2,
             },
         }),
         [radius]
@@ -60,6 +61,7 @@ function CustomGeometryParticles (props) {
         window.scrollTo(0,0)
     },[])
     useEffect(() => {
+
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
             const radius = (scrollPosition / maxScroll) * scaleFactor;
@@ -109,7 +111,6 @@ function CustomGeometryParticles (props) {
 
 const Scene = () => {
     const COUNT = 7000
-
     return (
         <div className={"canvas"}>
             <Canvas camera={{position: [0.8, 0.8, 0.8]}}>

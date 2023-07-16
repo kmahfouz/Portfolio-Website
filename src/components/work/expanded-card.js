@@ -60,24 +60,30 @@ export const ExpandedCard = ({clickCounter, setClickedState, coords, projectData
                     setClickedState()
                 }}
                 >
-                    <div className={'content-container'}>
-                        <div className={"image-container"} ref={imageContainer}>
-                            {images.map((image)=>{
-                                const fileExtension = image.substring(image.lastIndexOf('.')).toLowerCase();
-                                return (
-                                   <div className={'image'}>
-                                       {(fileExtension ===".mp4") ?
-                                           <video src={`${image}`} controls/>
-                                           :
-                                           <img src={`${image}`} alt="project"  /> }
-                                   </div>)
-                            })}
+                    <div className={'content-wrapper'}>
+                        <div>
+                            <h1> </h1>
+                        </div>
+                        <div className={'content-container'}>
+                            <div className={"image-container"} ref={imageContainer}>
+                                {images.map((image,index)=>{
+                                    const fileExtension = image.substring(image.lastIndexOf('.')).toLowerCase();
+                                    return (
+                                        <div className={'image'} key={index}>
+                                            {(fileExtension ===".mp4") ?
+                                                <video src={`${image}`} controls/>
+                                                :
+                                                <img src={`${image}`} alt="project"/> }
+                                        </div>)
+                                })}
+
+                            </div>
+                            <div className={"details-container"} ref={detailsContainer}>
+                                {projectData.description.long}
+                            </div>
 
                         </div>
-                        <div className={"details-container"} ref={detailsContainer}>
-                            {projectData.description.long}
-                        </div>
-                    </div>
+                   </div>
                 </div>
                 : ""}
         </>

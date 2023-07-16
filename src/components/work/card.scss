@@ -9,7 +9,7 @@
 
   --card-container-height:60vh;
   --card-container-width:85%;
-
+  --card-color: #F6EED6;
   --p-fontsize:2rem;
   --h1-fontsize:4rem;
 
@@ -23,7 +23,7 @@
   font-family: SpaceGrotesk, serif;
 
   .card-container-background {
-    background-color: #F6EED6;
+    background-color: var(--card-color);
     z-index: -1;
     min-height: 100%;
     width: 100%;
@@ -39,28 +39,29 @@
     box-sizing: border-box;
     width: 100%;
     min-height: 100%;
-
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 5%;
 
     .card{
-      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      background-color: lightgray;
-      object-fit: contain;
+      background-color: transparent;
       box-sizing: border-box;
       position: relative;
       display: flex;
       width: var(--card-width);
-      height: var(--card-height);
+      outline: 1px solid black;
       border-radius: 10px;
       align-items: center;
       justify-content: center;
       transition: 500ms ease;
       z-index: 1;
+    }
+    img{
+      border-radius: 10px;
+      object-fit: contain;
     }
     .hover {
       &:hover {
@@ -77,11 +78,12 @@
       width: 60%;
       height: 100%;
 
-      h1 {
+      h1,h2 {
         color: black;
         font-size: var(--h1-fontsize);
         text-decoration: underline 10px solid;
-        margin-top: 0;
+        margin: 0;
+        padding: 0;
       }
 
       .description {
