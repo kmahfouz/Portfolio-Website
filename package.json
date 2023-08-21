@@ -1,7 +1,7 @@
 {
   "name": "portfolio-website",
   "version": "0.1.0",
-  "homepage": "https://kmahfouz.github.io/Portfolio-Website",
+
   "private": true,
   "dependencies": {
     "@react-three/drei": "^9.57.3",

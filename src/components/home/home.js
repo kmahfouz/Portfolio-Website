@@ -7,7 +7,6 @@ const Home = () => {
 
     const workRef = useRef(null)
     const contactRef = useRef(null)
-
     const [isWork,setIsWork] = useState(false)
     const [isContact,setIsContact] = useState(false)
 

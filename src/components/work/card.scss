@@ -6,19 +6,18 @@
 .card-container {
   --card-height: 90%;
   --card-width: 45%;
-
   --card-container-height:60vh;
-  --card-container-width:85%;
+  --card-container-width:85vw;
   --card-color: #F6EED6;
-  --p-fontsize:2rem;
-  --h1-fontsize:4rem;
+  --p-fontsize:clamp(1.5rem,2vw,2vw);
+  --h1-fontsize:clamp(3rem, 4vw,4vw);
 
   display: flex;
   width: var(--card-container-width);
   min-height: var(--card-container-height);
   margin: 20px 0 100px 0;
   position: relative;
-  padding: 30px 40px 40px 40px;
+  padding: 3%;
 
   font-family: SpaceGrotesk, serif;
 
@@ -43,7 +42,6 @@
     flex-direction: row;
     align-items: center;
     gap: 5%;
-
     .card{
       background-position: center;
       background-repeat: no-repeat;
@@ -95,11 +93,13 @@
         border-radius: 10px;
         color: black;
         padding: 0;
+        margin-top: 10%;
         .paragraph{
           font-size: var(--p-fontsize);
           flex-basis: 70%;
           }
         .list{
+          justify-content: center;
           font-size: var(--p-fontsize);
           flex-basis: 30%;
           margin-top: 0;
@@ -109,8 +109,21 @@
 
         }
       }
+
+      @media screen and (max-width: 700px){
+        .description{
+          flex-direction: column;
+          .paragraph{
+            display: none;
+          }
+        }
+      }
     }
   }
+  @media screen and (max-width: 700px){
+    .card-content{
+      flex-direction: column;
+    }}
 
   .expanded-card-wrapper {
     position: absolute;
@@ -120,6 +133,16 @@
   }
 
 }
+
+@media screen and (max-width: 700px){
+  .card-container{
+    flex-direction: column;
+  }
+  .card-container:nth-of-type(odd) .card-content {
+    flex-direction: column;
+  }
+}
+
 @font-face {
   font-family: 'SpaceGrotesk';
   src: url("../../../public/font/SpaceGrotesk-VariableFont_wght.ttf");

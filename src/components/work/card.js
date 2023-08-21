@@ -32,16 +32,13 @@ export const Card = ({data}) => {
     },[cardRef, clickCounter])
 
 
-    const styles = {
-        backgroundImage: `url(${backgroundImg})`,
-    }
     return (
         <div className="card-container">
             <div className={"card-container-background"}></div>
             <div className={"card-content"} >
                 <div className={"card hover"} ref={cardRef} onClick={() => {setClickedState()
                 }}>
-                    <img src={backgroundImg} height={'100%'} width={'100%'}/>
+                    <img src={backgroundImg} alt={"Project Image"} height={'100%'} width={'100%'}/>
                     {backgroundImg === "" ? <h1>Coming Soon</h1> : ""}</div>
                 <div className={'description-container'}>
                     <h1>{data.title}</h1>
