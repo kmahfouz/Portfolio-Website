@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Portfolio-Website/static/css/main.7c9b2130.css",
-    "main.js": "/Portfolio-Website/static/js/main.1b36fd45.js",
-    "static/js/787.749b4a44.chunk.js": "/Portfolio-Website/static/js/787.749b4a44.chunk.js",
-    "static/media/Raleway-VariableFont_wght.ttf": "/Portfolio-Website/static/media/Raleway-VariableFont_wght.575ec9e676c7a85494bb.ttf",
-    "static/media/SpaceGrotesk-VariableFont_wght.ttf": "/Portfolio-Website/static/media/SpaceGrotesk-VariableFont_wght.1036357b9651eff7d3dd.ttf",
-    "index.html": "/Portfolio-Website/index.html",
-    "main.7c9b2130.css.map": "/Portfolio-Website/static/css/main.7c9b2130.css.map",
-    "main.1b36fd45.js.map": "/Portfolio-Website/static/js/main.1b36fd45.js.map",
-    "787.749b4a44.chunk.js.map": "/Portfolio-Website/static/js/787.749b4a44.chunk.js.map"
+    "main.css": "/static/css/main.06504840.css",
+    "main.js": "/static/js/main.ca5e55e6.js",
+    "static/js/787.749b4a44.chunk.js": "/static/js/787.749b4a44.chunk.js",
+    "static/media/Raleway-VariableFont_wght.ttf": "/static/media/Raleway-VariableFont_wght.575ec9e676c7a85494bb.ttf",
+    "static/media/SpaceGrotesk-VariableFont_wght.ttf": "/static/media/SpaceGrotesk-VariableFont_wght.1036357b9651eff7d3dd.ttf",
+    "index.html": "/index.html",
+    "main.06504840.css.map": "/static/css/main.06504840.css.map",
+    "main.ca5e55e6.js.map": "/static/js/main.ca5e55e6.js.map",
+    "787.749b4a44.chunk.js.map": "/static/js/787.749b4a44.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c9b2130.css",
-    "static/js/main.1b36fd45.js"
+    "static/css/main.06504840.css",
+    "static/js/main.ca5e55e6.js"
   ]
 }
