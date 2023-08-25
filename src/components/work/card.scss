@@ -1,24 +1,22 @@
+@import "../../variables";
 
 .card-container:nth-of-type(odd) .card-content {
   flex-direction: row-reverse;
 }
 
 .card-container {
-  --card-height: 90%;
-  --card-width: 45%;
-  --card-container-height:60vh;
-  --card-container-width:85vw;
-  --card-color: #F6EED6;
-  --p-fontsize:clamp(1.5rem,2vw,2vw);
-  --h1-fontsize:clamp(3rem, 4vw,4vw);
-
+  box-sizing: border-box;
   display: flex;
   width: var(--card-container-width);
   min-height: var(--card-container-height);
+  @media screen and (max-width: 800px){
+    height: 90vh;
+    justify-content: center;
+    padding: 0 3%;
+  }
   margin: 20px 0 100px 0;
   position: relative;
   padding: 3%;
-
   font-family: SpaceGrotesk, serif;
 
   .card-container-background {
@@ -37,7 +35,6 @@
     background-color: transparent;
     box-sizing: border-box;
     width: 100%;
-    min-height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -56,11 +53,20 @@
       justify-content: center;
       transition: 500ms ease;
       z-index: 1;
+      h1{
+        color: black;
+      }
+      @media screen and (max-width: 800px){
+        width: 70%;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: contain;
+      }
     }
-    img{
-      border-radius: 10px;
-      object-fit: contain;
-    }
+
     .hover {
       &:hover {
         transform: scale(1.05);
@@ -110,7 +116,7 @@
         }
       }
 
-      @media screen and (max-width: 700px){
+      @media screen and (max-width: 800px){
         .description{
           flex-direction: column;
           .paragraph{
@@ -120,10 +126,13 @@
       }
     }
   }
-  @media screen and (max-width: 700px){
+  @media screen and (max-width: 800px){
     .card-content{
-      flex-direction: column;
-    }}
+      height: var(--card-container-height);
+      flex-direction: column-reverse;
+      justify-content: space-evenly;
+    }
+  }
 
   .expanded-card-wrapper {
     position: absolute;
@@ -134,12 +143,14 @@
 
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 800px){
   .card-container{
+    min-height: auto;
     flex-direction: column;
   }
   .card-container:nth-of-type(odd) .card-content {
-    flex-direction: column;
+    flex-direction: column-reverse;
+
   }
 }
 

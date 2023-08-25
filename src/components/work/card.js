@@ -14,51 +14,56 @@ export const Card = ({data}) => {
     const setClickedState = () => {
         setClickCounter(current => current + 1)
     }
-    useEffect(()=>{
-       if(data.images){
-           setBackgroundImg(data.images[0])
-       }
-    },[data.images])
-    useEffect(()=>{
+    useEffect(() => {
+        if (data.images) {
+            setBackgroundImg(data.images[0])
+        }
+    }, [data.images])
+    useEffect(() => {
         const card = cardRef.current
         const getElementCenterPosition = () => {
             const rect = card.getBoundingClientRect();
-            const elementCenterX = rect.left + rect.width/2;
-            const elementCenterY = rect.height/2 ;
-            return { x: elementCenterX, y: elementCenterY };
+            const elementCenterX = rect.left + rect.width / 2;
+            const elementCenterY = rect.height / 2;
+            return {x: elementCenterX, y: elementCenterY};
         };
         const position = getElementCenterPosition();
         setCenterPosition(position)
-    },[cardRef, clickCounter])
+    }, [cardRef, clickCounter])
 
 
     return (
         <div className="card-container">
             <div className={"card-container-background"}></div>
-            <div className={"card-content"} >
-                <div className={"card hover"} ref={cardRef} onClick={() => {setClickedState()
+            <div className={"card-content"}>
+                <div className={"card hover"} ref={cardRef} onClick={() => {
+                    setClickedState()
                 }}>
-                    <img src={backgroundImg} alt={"Project Image"} height={'100%'} width={'100%'}/>
+                    <img src={backgroundImg} alt={"Project Image"}/>
                     {backgroundImg === "" ? <h1>Coming Soon</h1> : ""}</div>
                 <div className={'description-container'}>
                     <h1>{data.title}</h1>
-                    <div className={"description"} >
+                    <div className={"description"}>
                         <div className={"paragraph"}>
                             {description.brief}
                         </div>
                         <div>
                             <ul className={'list'}>
-                                {Object.values(tools).map((tool,index)=>{
-                                    return(
+                                {Object.values(tools).map((tool, index) => {
+                                    return (
                                         <li key={index}> {tool}</li>
                                     )
                                 })}
                             </ul>
                         </div>
-                     </div>
+                    </div>
                 </div>
             </div>
-            <ExpandedCard coords={centerPosition} clickCounter={clickCounter} setClickedState={setClickedState} projectData={data}></ExpandedCard>
+            {
+              description.long &&  <ExpandedCard coords={centerPosition} clickCounter={clickCounter} setClickedState={setClickedState}
+                              projectData={data}></ExpandedCard>
+            }
+
 
         </div>
     )

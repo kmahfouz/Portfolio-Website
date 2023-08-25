@@ -29,10 +29,9 @@
     ],
     "link": "",
     "tools": [
-      "ReactJS",
       "JavaScript",
+      "ReactJS",
       "HTML",
-      "CSS",
       "CSS Animations"
     ],
     "description": {
@@ -52,11 +51,10 @@
     ],
     "link": "https://ccimquiz.apsoprojects.org/",
     "tools": [
-      "ReactJS",
       "JavaScript",
-      "HTML",
-      "CSS",
-      "CSS Animations"
+      "ReactJS",
+      "CSS Animations",
+      "HTML"
     ],
     "description": {
       "brief": "The CCIM Quiz is a dynamic web application developed using ReactJS. It serves as a helpful tool for incoming freshmen, allowing them to determine which professors align with their preferences and characteristics. The quiz pulls data from a JSON file, ensuring flexibility and easy updates.",
@@ -87,7 +85,37 @@
     "link": "https://purchasing.apsoprojects.org",
     "tools": [
       "ReactJS",
-      "and stuff"
+      "SCSS",
+      "HTML",
+      "Flexbox"
+    ],
+    "description": {
+      "brief": "",
+      "long": ""
+    }
+  } ,{
+    "title": "Indiana Political Science Association",
+    "images": [
+    ],
+
+    "link": "https://ipsa.apsoprojects.org/",
+    "tools": [
+      "PHP",
+      "Wordrpress",
+      "SCSS"
+    ],
+    "description": {
+      "brief": "",
+      "long": ""
+    }
+  },{
+    "title": "Orchid Greenhouse App",
+    "images": [
+    ],
+
+    "link": "",
+    "tools": [
+      "React Native"
     ],
     "description": {
       "brief": "",

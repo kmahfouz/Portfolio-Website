@@ -3,15 +3,14 @@ uniform float uTime;
 uniform float uRadius;
 
 varying float vDistance;
-
 mat3 rotation3dY(float angle) {
   float s = sin(angle);
   float c = cos(angle);
   float t = tan(angle);
   return mat3(
+    c, 0, s,
     0, 1, 0,
-    0.0, 0, s,
-    1, 0.0, 0
+    -s, 0, c
   );
 }
 
@@ -29,7 +28,7 @@ void main() {
 
   gl_Position = projectedPosition;
 
-  gl_PointSize = size + 4.0;
+  gl_PointSize = size + 30.0;
   // point size
   // Size attenuation;
 
