@@ -5,7 +5,6 @@ import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 export const ExpandedCard = ({clickCounter, setClickedState, coords, projectData}) => {
 
     const [showContent, setShowContent] = useState(false)
-    const [backgroundImg, setBackgroundImg] = useState( "")
     const [images,setImages] = useState([])
 
     const imageContainer = useRef(null)
@@ -14,7 +13,6 @@ export const ExpandedCard = ({clickCounter, setClickedState, coords, projectData
 
     useEffect(()=>{
         if(projectData.images){
-            setBackgroundImg(projectData.images[0])
             setImages(projectData.images)
         }
     },[projectData.images])
@@ -42,9 +40,6 @@ export const ExpandedCard = ({clickCounter, setClickedState, coords, projectData
         top: posY,
         left: posX,
     }
-    const backgroundStyle ={
-        backgroundImage: `url(${backgroundImg})`,
-    }
 
     return (
         <>
@@ -56,7 +51,7 @@ export const ExpandedCard = ({clickCounter, setClickedState, coords, projectData
            >
             </div>
             {showContent ?
-                <div style={backgroundStyle} className={"expanded-card"} onClick={() => {
+                <div className={"expanded-card"} onClick={() => {
                     setClickedState()
                 }}
                 >
@@ -81,7 +76,6 @@ export const ExpandedCard = ({clickCounter, setClickedState, coords, projectData
                             <div className={"details-container"} ref={detailsContainer}>
                                 {projectData.description.long}
                             </div>
-
                         </div>
                    </div>
                 </div>

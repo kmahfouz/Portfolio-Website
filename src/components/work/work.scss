@@ -1,3 +1,4 @@
+@import "../../variables";
 .work{
   display: flex;
   flex-direction: column;
@@ -11,5 +12,45 @@
     font-size: 50pt;
     position: relative;
     bottom: 0;
+  }
+  .contact-container {
+    .contact-card-container {
+      box-sizing: border-box;
+      display: flex;
+      width: 100vw;
+      min-height: var(--card-container-height);
+      @media screen and (max-width: 800px) {
+        height: 90vh;
+        justify-content: center;
+        padding: 0 3%;
+      }
+      position: relative;
+      padding: 3%;
+      font-family: SpaceGrotesk, serif;
+
+      .contact-card-container-background {
+        box-sizing: border-box;
+        background:var(--card-color);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        z-index: -1;
+        min-height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .contact-card-content {
+        z-index: 1;
+        background-color: transparent;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5%;
+      }
+    }
   }
 }

@@ -10,7 +10,7 @@ const Work = () => {
             <p> Projects</p>
             {data.map((element,index) => {
                 return (
-                   <Card index={index} data={element} key={index}></Card>
+                   <Card data={element} index={index} key={index}></Card>
                 )
             })}
         </div>
