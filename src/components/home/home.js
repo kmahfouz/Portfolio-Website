@@ -2,7 +2,7 @@ import "./home.scss"
 import {useEffect, useRef, useState} from "react";
 import Work from "../work/work.js";
 import Contact from "../contact/contact";
-
+import resume from '../../Karim Mahfouz Resume.pdf'
 const Home = () => {
 
     const workRef = useRef(null)
@@ -37,7 +37,9 @@ const Home = () => {
             <div className={"button-box"}>
                 <div className={"link hover underline"} onClick={() => {setIsWork(true)}}>Work</div>
                 <div className={"link hover underline"} onClick={() => {setIsContact(true)}}>Contact me</div>
-                <div className={"link hover underline"} onClick={() => {setIsContact(true)}}>Resume</div>
+                <a href={resume} download>
+                    <div className={"link hover underline"} onClick={() => {setIsContact(true)}}>Resume</div>
+                </a>
             </div>
         </div>
             <div className={"work-container"} ref={workRef}>

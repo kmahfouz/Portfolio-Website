@@ -18,6 +18,9 @@ export const Card = ({data}) => {
         if (data.images) {
             setBackgroundImg(data.images[0])
         }
+        else{
+            setBackgroundImg('')
+        }
     }, [data.images])
     useEffect(() => {
         const card = cardRef.current
@@ -40,7 +43,7 @@ export const Card = ({data}) => {
                     setClickedState()
                 }}>
                     <img src={backgroundImg} alt={"Project Image"}/>
-                    {backgroundImg === "" ? <h1>Coming Soon</h1> : ""}</div>
+                    {data.images.length < 1 ? <h1>Coming Soon</h1> : ""}</div>
                 <div className={'description-container'}>
                     <h1>{data.title}</h1>
                     <div className={"description"}>
