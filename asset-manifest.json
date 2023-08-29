@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/Portfolio-Website/static/css/main.efd76ab3.css",
-    "main.js": "/Portfolio-Website/static/js/main.ba2fb3ed.js",
+    "main.css": "/Portfolio-Website/static/css/main.d652d1fc.css",
+    "main.js": "/Portfolio-Website/static/js/main.902eaa62.js",
     "static/js/787.749b4a44.chunk.js": "/Portfolio-Website/static/js/787.749b4a44.chunk.js",
     "static/media/Raleway-VariableFont_wght.ttf": "/Portfolio-Website/static/media/Raleway-VariableFont_wght.575ec9e676c7a85494bb.ttf",
     "static/media/SpaceGrotesk-VariableFont_wght.ttf": "/Portfolio-Website/static/media/SpaceGrotesk-VariableFont_wght.1036357b9651eff7d3dd.ttf",
+    "static/media/Karim Mahfouz Resume.pdf": "/Portfolio-Website/static/media/Karim Mahfouz Resume.229a31e9813ca56d2420.pdf",
     "index.html": "/Portfolio-Website/index.html",
-    "main.efd76ab3.css.map": "/Portfolio-Website/static/css/main.efd76ab3.css.map",
-    "main.ba2fb3ed.js.map": "/Portfolio-Website/static/js/main.ba2fb3ed.js.map",
+    "main.d652d1fc.css.map": "/Portfolio-Website/static/css/main.d652d1fc.css.map",
+    "main.902eaa62.js.map": "/Portfolio-Website/static/js/main.902eaa62.js.map",
     "787.749b4a44.chunk.js.map": "/Portfolio-Website/static/js/787.749b4a44.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.efd76ab3.css",
-    "static/js/main.ba2fb3ed.js"
+    "static/css/main.d652d1fc.css",
+    "static/js/main.902eaa62.js"
   ]
 }
